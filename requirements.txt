@@ -1,0 +1,10 @@
+Django>=3.0,<4.0
+psycopg2-binary>=2.8
+graphene>=2.0
+graphene-django
+django-cors-headers==3.2.1
+geopy==1.21.0
+djangorestframework==3.11.0
+djangorestframework-simplejwt==4.6.0
+geocoder==1.38.1
+
