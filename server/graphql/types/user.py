@@ -13,7 +13,7 @@ class User(DjangoObjectType):
 
     class Meta:
         model = UserModel
-        only_fields = ("email", "password", "clothing_preference", "pair", "size", "location")
+        only_fields = ("email", "password", "clothing_preference", "pair", "size", "location", "distance")
 
     def resolve_email(self, info, **kwargs):
         """Keep email private except if you're the current user."""
@@ -35,3 +35,6 @@ class User(DjangoObjectType):
     
     def resolve_location(self, info, **kwargs):
         return self.location
+
+    def distance(self, info, **kwargs):
+        return getattr(self, 'distance', None)

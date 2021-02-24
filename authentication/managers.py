@@ -14,7 +14,7 @@ class UserManager(BaseUserManager):
         user = self.model(email=email, **extra_fields)
         user.set_password(password)
         user.pair = pair
-        user.size = size 
+        user.size = size
         user.clothing_preference = preference
         user.save(using=self._db)
         return user
@@ -25,6 +25,7 @@ class UserManager(BaseUserManager):
 
     def create_superuser(self, email=None, password=None, pair='L', size=7.5, preference="M", **extra_fields):
         extra_fields.setdefault('is_superuser', True)
+        extra_fields.setdefault('is_staff', True)
 
         if extra_fields.get('is_superuser') is not True:
             raise ValueError(_('Superuser must have is_superuser=True.'))

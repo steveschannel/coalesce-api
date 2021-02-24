@@ -1,6 +1,6 @@
 from __future__ import unicode_literals
 
-from django.db import models
+from django.contrib.gis.db import models
 from django.core.mail import send_mail
 from django.contrib.auth.models import PermissionsMixin
 from django.contrib.auth.base_user import AbstractBaseUser
@@ -8,19 +8,22 @@ from django.utils.translation import ugettext_lazy as _
 
 from .managers import UserManager
 
+
 class LocationData(models.Model):
     address = models.CharField(max_length=1024, default=None, null=True)
     city = models.CharField(max_length=50, default=None, null=False)
     state = models.CharField(max_length=10, default=None, null=True)
-    latitude = models.DecimalField(
-        max_digits=22, decimal_places=16, default=None, null=True
+    latitude = models.FloatField(
+        default=None, null=True
     )
-    longitude = models.DecimalField(
-        max_digits=22, decimal_places=16, default=None, null=True
+    longitude = models.FloatField(
+        default=None, null=True
     )
+    point = models.PointField(default=None, null=True)
 
 
 class User(AbstractBaseUser, PermissionsMixin):
+    is_staff = models.BooleanField(_('staff status'), default=False)
     email = models.EmailField(_('email address'), unique=True)
     first_name = models.CharField(_('first name'), max_length=30, blank=True)
     last_name = models.CharField(_('last name'), max_length=30, blank=True)
@@ -31,7 +34,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     LEFT_FOOT = "L"
     RIGHT_FOOT = "R"
 
-    PAIR_OPTIONS = [(LEFT_FOOT, "Left foot"),(RIGHT_FOOT, "Right foot")]
+    PAIR_OPTIONS = [(LEFT_FOOT, "Left foot"), (RIGHT_FOOT, "Right foot")]
 
     pair = models.CharField(_('pair'), choices=PAIR_OPTIONS, max_length=1)
 
@@ -39,11 +42,14 @@ class User(AbstractBaseUser, PermissionsMixin):
     FEMALE_CLOTHING_PREFERENCE = "F"
     ANY = "A"
 
-    PREFRENCE_OPTIONS = [(MALE_CLOTHING_PREFERENCE, "Male presenting clothing"), (FEMALE_CLOTHING_PREFERENCE, "Female presenting clothing"), (ANY, "Any")]
+    PREFRENCE_OPTIONS = [(MALE_CLOTHING_PREFERENCE, "Male presenting clothing"), (
+        FEMALE_CLOTHING_PREFERENCE, "Female presenting clothing"), (ANY, "Any")]
 
-    clothing_preference = models.CharField(_('user preference'), choices=PREFRENCE_OPTIONS, default=ANY, max_length=1)
+    clothing_preference = models.CharField(
+        _('user preference'), choices=PREFRENCE_OPTIONS, default=ANY, max_length=1)
 
-    location = models.OneToOneField(LocationData, on_delete=models.SET_NULL, null=True)
+    location = models.OneToOneField(
+        LocationData, on_delete=models.SET_NULL, null=True, related_name='user')
 
     objects = UserManager()
 

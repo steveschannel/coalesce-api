@@ -1,0 +1,218 @@
+[
+{
+    "model": "authentication.locationdata",
+    "pk": 2,
+    "fields": {
+        "address": "JEjf",
+        "city": "Jersey City",
+        "state": "NJ",
+        "latitude": 40.717541,
+        "longitude": -74.039047,
+        "point": "SRID=4326;POINT (-74.039047 40.717541)"
+    }
+},
+{
+    "model": "authentication.locationdata",
+    "pk": 3,
+    "fields": {
+        "address": "PLace 2",
+        "city": "Jersey City",
+        "state": "NJ",
+        "latitude": 40.723383,
+        "longitude": -74.045925,
+        "point": "SRID=4326;POINT (-74.045925 40.723383)"
+    }
+},
+{
+    "model": "authentication.locationdata",
+    "pk": 4,
+    "fields": {
+        "address": "Liberty State Park",
+        "city": "Jersey City",
+        "state": "NJ",
+        "latitude": 40.703605,
+        "longitude": -74.047642,
+        "point": "SRID=4326;POINT (-74.047642 40.703605)"
+    }
+},
+{
+    "model": "authentication.locationdata",
+    "pk": 5,
+    "fields": {
+        "address": "Place 4",
+        "city": "Jersey City",
+        "state": "NJ",
+        "latitude": 40.721015,
+        "longitude": -74.03263,
+        "point": "SRID=4326;POINT (-74.03263 40.721015)"
+    }
+},
+{
+    "model": "authentication.locationdata",
+    "pk": 6,
+    "fields": {
+        "address": "Ellis Island",
+        "city": "Jersey City",
+        "state": "NJ",
+        "latitude": 40.699905,
+        "longitude": -74.040872,
+        "point": "SRID=4326;POINT (-74.04087199999999 40.699905)"
+    }
+},
+{
+    "model": "authentication.locationdata",
+    "pk": 7,
+    "fields": {
+        "address": "Manhattan",
+        "city": "New York City",
+        "state": "NJ",
+        "latitude": 40.699905,
+        "longitude": -73.993502,
+        "point": "SRID=4326;POINT (-73.99350200000001 40.699905)"
+    }
+},
+{
+    "model": "authentication.locationdata",
+    "pk": 8,
+    "fields": {
+        "address": "Something in Hoboken",
+        "city": "Hoboken",
+        "state": "NJ",
+        "latitude": 40.745609,
+        "longitude": -74.03318,
+        "point": "SRID=4326;POINT (-74.03318 40.745609)"
+    }
+},
+{
+    "model": "authentication.locationdata",
+    "pk": 9,
+    "fields": {
+        "address": "Something by Journal Square",
+        "city": "Jersey City",
+        "state": "NJ",
+        "latitude": 40.734574,
+        "longitude": -74.063062,
+        "point": "SRID=4326;POINT (-74.063062 40.734574)"
+    }
+},
+{
+    "model": "authentication.locationdata",
+    "pk": 10,
+    "fields": {
+        "address": "Something in Queens",
+        "city": "Manhattan",
+        "state": "NY",
+        "latitude": 40.717704,
+        "longitude": -73.960511,
+        "point": "SRID=4326;POINT (-73.960511 40.717704)"
+    }
+},
+{
+    "model": "authentication.locationdata",
+    "pk": 11,
+    "fields": {
+        "address": "Something at Point Liberte",
+        "city": "Jersey City",
+        "state": "NJ",
+        "latitude": 40.689726,
+        "longitude": -74.072141,
+        "point": "SRID=4326;POINT (-74.072141 40.689726)"
+    }
+},
+{
+    "model": "authentication.locationdata",
+    "pk": 12,
+    "fields": {
+        "address": "Something at Statue of Liberty",
+        "city": "NYC",
+        "state": "NY",
+        "latitude": 40.689758,
+        "longitude": -74.045623,
+        "point": "SRID=4326;POINT (-74.04562300000001 40.689758)"
+    }
+},
+{
+    "model": "authentication.locationdata",
+    "pk": 13,
+    "fields": {
+        "address": "Something at Newark Airport",
+        "city": "Newark",
+        "state": "NJ",
+        "latitude": 40.696915,
+        "longitude": -74.168132,
+        "point": "SRID=4326;POINT (-74.168132 40.696915)"
+    }
+},
+{
+    "model": "authentication.locationdata",
+    "pk": 14,
+    "fields": {
+        "address": "Something at NJIT",
+        "city": "Newark",
+        "state": "NJ",
+        "latitude": 40.741733,
+        "longitude": -74.176794,
+        "point": "SRID=4326;POINT (-74.176794 40.741733)"
+    }
+},
+{
+    "model": "authentication.locationdata",
+    "pk": 15,
+    "fields": {
+        "address": "Something at Bayonne",
+        "city": "Bayonne",
+        "state": "NJ",
+        "latitude": 40.678348,
+        "longitude": -74.106969,
+        "point": "SRID=4326;POINT (-74.10696900000001 40.678348)"
+    }
+},
+{
+    "model": "authentication.locationdata",
+    "pk": 16,
+    "fields": {
+        "address": "Something at Battery Park",
+        "city": "Manhattan",
+        "state": "NY",
+        "latitude": 40.702741,
+        "longitude": -74.01428,
+        "point": "SRID=4326;POINT (-74.01428 40.702741)"
+    }
+},
+{
+    "model": "authentication.locationdata",
+    "pk": 17,
+    "fields": {
+        "address": "Something by Empire State",
+        "city": "Manhattan",
+        "state": "NY",
+        "latitude": 40.748784,
+        "longitude": -73.985273,
+        "point": "SRID=4326;POINT (-73.98527300000001 40.748784)"
+    }
+},
+{
+    "model": "authentication.locationdata",
+    "pk": 18,
+    "fields": {
+        "address": "Something by Rockefeller Center",
+        "city": "Manhattan",
+        "state": "NY",
+        "latitude": 40.759431,
+        "longitude": -73.977647,
+        "point": "SRID=4326;POINT (-73.977647 40.759431)"
+    }
+},
+{
+    "model": "authentication.locationdata",
+    "pk": 19,
+    "fields": {
+        "address": "Something in Central Park",
+        "city": "Manhattan",
+        "state": "NY",
+        "latitude": 40.777706,
+        "longitude": -73.967458,
+        "point": "SRID=4326;POINT (-73.96745799999999 40.777706)"
+    }
+}
+]

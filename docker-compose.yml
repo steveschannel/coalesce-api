@@ -2,15 +2,18 @@ version: "3.9"
    
 services:
   db:
-    image: postgres
+    image: mdillon/postgis
     environment:
-      - POSTGRES_DB=postgres
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=postgis
+      - POSTGRES_USER=postgis
+      - POSTGRES_PASSWORD=postgis
+    container_name: coalesce_db
+    ports:
+      - "5432:5432"
   api:
     build: .
     command: python manage.py runserver 0.0.0.0:8000
-    container_name: coalesce
+    container_name: coalesce_api
     volumes:
       - .:/code
     ports:

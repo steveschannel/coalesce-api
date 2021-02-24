@@ -25,7 +25,7 @@ SECRET_KEY = '16(ckoc&x%6t%*ubk&j2(xxo9dd!op+1^6(z9p$e65lu$4ur_q'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 # Application definition
 
@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.gis',
     'graphene_django',
     'sharing',
     'authentication',
@@ -77,11 +78,11 @@ WSGI_APPLICATION = 'server.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'PASSWORD': 'postgres',
-        'HOST': 'db',
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': 'postgis',
+        'USER': 'postgis',
+        'PASSWORD': 'postgis',
+        'HOST': 'coalesce_db',
         'PORT': 5432,
     }
 }

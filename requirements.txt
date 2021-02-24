@@ -7,4 +7,3 @@ geopy==1.21.0
 djangorestframework==3.11.0
 djangorestframework-simplejwt==4.6.0
 geocoder==1.38.1
-
